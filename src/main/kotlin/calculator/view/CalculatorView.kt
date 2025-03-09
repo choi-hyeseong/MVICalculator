@@ -93,6 +93,7 @@ class CalculatorView : JFrame() {
         // 창 보이기 설정
         isVisible = true
     }
+    // todo 다음 로직들은 VM으로 가야됨.
     /**
      * Button Action implement part.
      * 필요시 클래스단위로 구현해서 상속 or 구현 구조로 짜도 될듯
