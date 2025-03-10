@@ -157,7 +157,7 @@ interface IIntent
  */
 interface IEffect
 ```
-기본적인 MVI 패턴에서의 ViewModel입니다. 알림과 같은 SideEffect는 하나의 수신자만 받으며, 계속해서 갱신되는 Hot-Stream인 Channel로, 상태를 지속적으로 유지하고 필요할때마다 제공되야 하는 State는 StateFlow로 구성하였습니다.
+기본적인 MVI 패턴에서의 ViewModel입니다. 알림과 같은 SideEffect는 계속해서 갱신되는 Hot-Stream인 Channel로, 상태를 지속적으로 유지하고 필요할때마다 제공되야 하는 State는 StateFlow로 구성하였습니다.
 
 만약 좀더 갱신되어야 한다면 Intent의 손실을 막기 위해 SharedFlow로 작성하여 내부에서 안전하게 저장해두는것도 좋을것 같습니다. (0개 이상 저장가능)
 
