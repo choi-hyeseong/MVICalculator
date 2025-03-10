@@ -161,6 +161,10 @@ interface IEffect
 
 만약 좀더 갱신되어야 한다면 Intent의 손실을 막기 위해 SharedFlow로 작성하여 내부에서 안전하게 저장해두는것도 좋을것 같습니다. (0개 이상 저장가능)
 
+* StateFlow (여러명이서 받을 수 있음. 1개이상 보증) - 상태 저장에 적합 (Android에서 화면회전시 새롭게 observe 되더라도 상태 제공해줘야 함)
+* SharedFlow (여러명이서 받을 수 있음. 0개이상) - 내부적으로 정보 저장에 적합하나, 현재는 그냥 처리해도 될듯하여 핸들링함
+* Channel (Hot-Stream, 1명만) - 1회성 이벤트에 적합함. 만약 여러명이 observe가 가능하다면 화면 회전시 그만큼 더 Alert가 발생함. Hot-Stream이므로 1회성 구현에 더 적합하기도 함
+
 ```kotlin
 
 
