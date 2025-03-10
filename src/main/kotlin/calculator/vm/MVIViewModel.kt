@@ -24,7 +24,7 @@ abstract class MVIViewModel<S : IState, I : IIntent, E : IEffect>(initial: S) {
      * View -> VM으로 인텐트 전달
      * @param intent 전달된 인텐트
      */
-    suspend fun sendIntent(intent: I) {
+    fun sendIntent(intent: I) {
         handleIntent(intent)
     }
 
